@@ -1,4 +1,4 @@
-preact build
+preact build --template index.html
 
 git add build/
 
