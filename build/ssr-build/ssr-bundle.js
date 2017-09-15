@@ -669,7 +669,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-if (window && window.serviceWorker) {
+if (typeof window !== "undefined" && window.serviceWorker) {
 	// @HACK: Preact-CLI forces you to use /sw.js, reregister the service worker
 	navigator.serviceWorker.getRegistrations().then(function (a) {
 		return a.map(function (sw) {
