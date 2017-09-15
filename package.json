@@ -6,7 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
-    "serve": "preact build && preact serve",
+    "serve": "preact build && preact serve --port 8000",
     "dev": "preact watch",
     "test": "eslint src && preact test"
   },
@@ -24,6 +24,7 @@
   "dependencies": {
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
+    "preact-material-components": "^1.1.6",
     "preact-router": "^2.5.7"
   }
 }
