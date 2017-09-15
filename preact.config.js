@@ -1,6 +1,6 @@
 export default function(config, env, helpers) {
-    if (env === "PRODUCTION") {
-        config.publicPath = "skills";
+    if (env.production) {
+        config.output.publicPath = "/skills/"
     }
     return config;
 }
