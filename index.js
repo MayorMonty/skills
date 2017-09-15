@@ -18,9 +18,9 @@ export default () => (
 	<div id="app">
 		<Header />
 		<Router>
-			<Home path="/" />
-			<Profile path="/profile/" user="me" />
-			<Profile path="/profile/:user" />
+			<Home path={__webpack_public_path__ + "/"} />
+			<Profile path={__webpack_public_path__ + "/profile/"} user="me" />
+			<Profile path={__webpack_public_path__ + "/profile/:user"} />
 		</Router>
 	</div>
 );
