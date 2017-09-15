@@ -669,6 +669,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+// @HACK: Preact-CLI forces you to use /sw.js, reregister the service worker
+navigator.serviceWorker.getRegistrations().then(function (a) {
+	return a.map(function (sw) {
+		return sw.unregister();
+	});
+});
+console.log(__webpack_require__.p + 'sw.js');
+navigator.serviceWorker.register(__webpack_require__.p + 'sw.js');
+
 var _ref = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
 	'div',
 	{ id: 'app' },
