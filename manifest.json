@@ -1,7 +1,7 @@
 {
-  "name": "Preact PWA",
-  "short_name": "Preact PWA",
-  "start_url": "/",
+  "name": "VEX Skills",
+  "short_name": "Skills",
+  "start_url": "/skills/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
