@@ -2,7 +2,9 @@ preact build
 
 git add build/
 
-git commit "${date '+%Y-%m-%d %H:%M:%S'} build"
+today=`date +%Y-%m-%d.%H:%M:%S`
+
+git commit -m "${today} build"
 
 git push
 
