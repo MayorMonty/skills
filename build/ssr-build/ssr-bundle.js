@@ -680,21 +680,21 @@ if (typeof window !== "undefined" && window.serviceWorker && "production" === "p
 	navigator.serviceWorker.register(__webpack_require__.p + 'sw.js');
 }
 
-var _ref = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-	'div',
-	{ id: 'app' },
-	__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_3__components_header__["a" /* default */], null),
-	__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-		__WEBPACK_IMPORTED_MODULE_2_preact_router__["Router"],
-		null,
-		__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_4__routes_home__["a" /* default */], { path: '/' }),
-		__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5__routes_profile__["a" /* default */], { path: '/profile/', user: 'me' }),
-		__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5__routes_profile__["a" /* default */], { path: '/profile/:user' })
-	)
-);
+var _ref = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_3__components_header__["a" /* default */], null);
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-	return _ref;
+	return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+		'div',
+		{ id: 'app' },
+		_ref,
+		__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+			__WEBPACK_IMPORTED_MODULE_2_preact_router__["Router"],
+			null,
+			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_4__routes_home__["a" /* default */], { path: __webpack_require__.p + "/" }),
+			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5__routes_profile__["a" /* default */], { path: __webpack_require__.p + "/profile/", user: 'me' }),
+			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5__routes_profile__["a" /* default */], { path: __webpack_require__.p + "/profile/:user" })
+		)
+	);
 });
 
 /***/ }),
