@@ -11,7 +11,7 @@
     "test": "eslint src && preact test"
   },
   "keywords": [],
-  "author": "",
+  "author": "Brendan McGuire",
   "license": "ISC",
   "eslintConfig": {
     "extends": "eslint-config-synacor"
