@@ -12,8 +12,8 @@ import 'preact-material-components/Button/style.css';
 export default class Header extends Component {
 	render() {
 		return (
-			<div>
-				<Toolbar className="toolbar" style={style.toolbar}>
+			<div class={style.toolbar}>
+				<Toolbar className="toolbar">
 					<Toolbar.Row>
 					<Toolbar.Section align-start={true}>
 						<Toolbar.Icon menu={true}>menu</Toolbar.Icon>
@@ -22,9 +22,11 @@ export default class Header extends Component {
 						</Toolbar.Title>
 					</Toolbar.Section>
 					<Toolbar.Section align-end={true}>
-						<Button icon ripple compact>
-							<Toolbar.Icon>filter_list</Toolbar.Icon>
-						</Button>
+						<div class={style.icon}>
+							<Button icon ripple compact>
+								<Toolbar.Icon>filter_list</Toolbar.Icon>
+							</Button>
+						</div>
 					</Toolbar.Section>
 					</Toolbar.Row>
 				</Toolbar>
