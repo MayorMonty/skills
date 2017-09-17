@@ -1,5 +1,7 @@
 preact build --template index.html
 
+sed -i -e 's/navigator.serviceWorker.register("/sw.js")/navigator.serviceWorker.register("/skills/sw.js")/g' build/
+
 git add build/
 
 today=`date +%Y-%m-%d.%H:%M:%S`
