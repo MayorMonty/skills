@@ -1,8 +1,14 @@
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 
-.icon {
+.icon:last-of-type {
 	margin-right: 16px;
+}
+
+.menu {
+	margin-left: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .icon button {
@@ -20,6 +26,10 @@
 	padding: 0 !important;
 }
 
+.toolbar {
+	position: fixed;
+	width: 100%;
+}
 
 .toolbar header {
 	background-color: #f44336 !important;

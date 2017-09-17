@@ -16,10 +16,12 @@ export default class Header extends Component {
 				<Toolbar className="toolbar">
 					<Toolbar.Row>
 					<Toolbar.Section align-start={true}>
-						<Toolbar.Icon menu={true}>menu</Toolbar.Icon>
-						<Toolbar.Title>
-						VEX Skills Helper
-						</Toolbar.Title>
+						<div class={[style.icon, style.menu].join(" ")}>
+							<Button icon ripple compact>
+								<Toolbar.Icon menu>menu</Toolbar.Icon>
+							</Button>
+						</div>
+						<Toolbar.Title>VEX Skills Helper</Toolbar.Title>
 					</Toolbar.Section>
 					<Toolbar.Section align-end={true}>
 						<div class={style.icon}>
