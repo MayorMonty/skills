@@ -1,10 +1,10 @@
 .mdl-data-table {
     position: relative;
-    border: 1px solid rgba(0, 0, 0, .12);
     border-collapse: collapse;
     white-space: nowrap;
     font-size: 13px;
-    background-color: #fff
+    background-color: #fff;
+    width: 100%;
 }
 .mdl-data-table thead {
     padding-bottom: 3px
