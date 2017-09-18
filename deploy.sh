@@ -1,3 +1,4 @@
+set -e
 preact build --template index.html
 find build/ -maxdepth 1 -name 'bundle.*.js' -print0 | xargs -0 -I {} -P 0 sed -i -e 's/\/sw\.js/\/skills\/sw\.js/g' {}
 git add build/
