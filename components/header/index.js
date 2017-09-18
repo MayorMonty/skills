@@ -8,7 +8,6 @@ import 'preact-material-components/Toolbar/style.css';
 import Button from 'preact-material-components/Button';
 import 'preact-material-components/Button/style.css';
 
-
 export default class Header extends Component {
 	render() {
 		return (
