@@ -926,8 +926,9 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
  * @param {String} filters.season
  */
 /* harmony default export */ __webpack_exports__["a"] = ((function () {
-    var _ref = _asyncToGenerator(function* (_ref2) {
-        var program = _ref2.program,
+    var _ref = _asyncToGenerator(function* () {
+        var _ref2 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+            program = _ref2.program,
             sku = _ref2.sku,
             grade = _ref2.grade,
             country = _ref2.country,
@@ -940,7 +941,6 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
             team = _ref2.team,
             _ref2$season = _ref2.season,
             season = _ref2$season === undefined ? "In The Zone" : _ref2$season;
-
 
         var inital = yield __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vexdb__["get"])("skills", __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__util__["a" /* existant */])({ program: program, sku: sku, type: type, team: team, season: season }));
 
@@ -1040,7 +1040,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
         return inital;
     });
 
-    return function (_x) {
+    return function () {
         return _ref.apply(this, arguments);
     };
 })());
