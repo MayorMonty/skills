@@ -65,6 +65,11 @@
     padding-bottom: 8px;
     box-sizing: border-box
 }
+
+.mdl-data-table .mdl-data-table--checkbox {
+    padding-bottom: 0;
+}
+
 .mdl-data-table th.mdl-data-table__header--sorted-ascending,
 .mdl-data-table th.mdl-data-table__header--sorted-descending {
     color: rgba(0, 0, 0, .87)

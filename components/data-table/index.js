@@ -14,6 +14,9 @@ export default class DataTable extends Component {
 			<table class={style["mdl-data-table"]}>
                 <thead>
                     <tr>
+                        <th class={style["mdl-data-table--checkbox"]}>
+                            <Checkbox></Checkbox>
+                        </th>
                         { Object.values(headers).map( prop => 
                             <th class={style["mdl-data-table__cell--non-numeric"]}>{ prop }</th>
                         ) }
@@ -22,6 +25,9 @@ export default class DataTable extends Component {
                 <tbody>
                     { values.map( run => 
                         <tr key={`${run.sku}-${run.team}-${run.type}`}>
+                            <td>
+                                <Checkbox></Checkbox>
+                            </td>
                             { Object.keys(headers).map( prop => 
                                 <td class={style["mdl-data-table__cell--non-numeric"]}>
                                     { [run, ...prop.split(".")].reduce((a,b) => a[b]) }
