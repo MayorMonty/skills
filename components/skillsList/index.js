@@ -13,7 +13,7 @@ export default class SkillsList extends Component {
     state = {
         loaded: false,
         filters: {
-            country: "United States"
+            
         }
     }
 
@@ -26,16 +26,16 @@ export default class SkillsList extends Component {
     }
 
 	render({}, { loaded, list }) {
-        console.log(list);
 		if(loaded) {
             return <div class={style.table}>
-                <List>
-                    { list.map( run => 
-                        <List.Item>
-                            <b>{ run.score }</b> by <a href={`https://vexdb.io/teams/view/${run.team.number}`}>{ run.team.team_name } ({ run.team.number })</a> at <a href={`https://www.robotevents.com/robot-competitions/vex-robotics-competition/${run.sku}.html`}> { run.event.name }</a>
-                        </List.Item>
-                    ) }
-                </List>
+                <DataTable headers={{
+                    filterRank: "Rank",
+                    score: "Score",
+                    "team.team_name": "Team",
+                    "team.number": "Team Number",
+                    "event.name": "Event"
+                    
+                }} values={list}></DataTable>
             </div>
         } else {
             return <p>Loading....</p>;
