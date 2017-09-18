@@ -3,11 +3,14 @@ import style from "./style";
 
 import SkillsList from "../../components/skillsList";
 
+import config from "../../store/config";
+
 export default class Home extends Component {
 	render() {
+		console.log(config)
 		return (
 			<div class={style.home}>
-				<SkillsList type={2} program={"VRC"} />
+				<SkillsList filters={filters} />
 			</div>
 		);
 	}
