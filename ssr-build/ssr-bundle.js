@@ -892,7 +892,7 @@ module.exports = require("fs");
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"mdl-data-table":"mdl-data-table__2fy2P","mdl-data-table__select":"mdl-data-table__select__2EZ5z","is-selected":"is-selected__2ApVD","mdl-data-table__header--sorted-ascending":"mdl-data-table__header--sorted-ascending__HodSs","mdl-data-table__header--sorted-descending":"mdl-data-table__header--sorted-descending__3l9ox","mdl-data-table__cell--non-numeric":"mdl-data-table__cell--non-numeric__1tgit"};
+module.exports = {"mdl-data-table":"mdl-data-table__2fy2P","mdl-data-table__select":"mdl-data-table__select__2EZ5z","is-selected":"is-selected__2ApVD","mdl-data-table--checkbox":"mdl-data-table--checkbox__MhPGF","mdl-data-table__header--sorted-ascending":"mdl-data-table__header--sorted-ascending__HodSs","mdl-data-table__header--sorted-descending":"mdl-data-table__header--sorted-descending__3l9ox","mdl-data-table__cell--non-numeric":"mdl-data-table__cell--non-numeric__1tgit"};
 
 /***/ }),
 
@@ -1988,6 +1988,13 @@ module.exports = require("util");
 
 /***/ }),
 
+/***/ "COSM":
+/***/ (function(module, exports) {
+
+module.exports = {"filters":{"country":"United States"}}
+
+/***/ }),
+
 /***/ "DQCr":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2066,6 +2073,8 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style__ = __webpack_require__("ZAL5");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_skillsList__ = __webpack_require__("vsei");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_config__ = __webpack_require__("COSM");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_config___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__store_config__);
 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2079,7 +2088,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var _ref = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_2__components_skillsList__["a" /* default */], { type: 2, program: "VRC" });
+
 
 var Home = function (_Component) {
 	_inherits(Home, _Component);
@@ -2091,10 +2100,11 @@ var Home = function (_Component) {
 	}
 
 	Home.prototype.render = function render() {
+		console.log(__WEBPACK_IMPORTED_MODULE_3__store_config___default.a);
 		return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
 			"div",
 			{ "class": __WEBPACK_IMPORTED_MODULE_1__style___default.a.home },
-			_ref
+			__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_2__components_skillsList__["a" /* default */], { filters: __WEBPACK_IMPORTED_MODULE_3__store_config___default.a.filters })
 		);
 	};
 
@@ -2683,6 +2693,14 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+var _ref2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_2_preact_material_components_Checkbox__["a" /* default */], null);
+
+var _ref3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    'td',
+    null,
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_2_preact_material_components_Checkbox__["a" /* default */], null)
+);
+
 var DataTable = function (_Component) {
     _inherits(DataTable, _Component);
 
@@ -2705,6 +2723,11 @@ var DataTable = function (_Component) {
                 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
                     'tr',
                     null,
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                        'th',
+                        { 'class': __WEBPACK_IMPORTED_MODULE_1__style___default.a["mdl-data-table--checkbox"] },
+                        _ref2
+                    ),
                     Object.values(headers).map(function (prop) {
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
                             'th',
@@ -2721,6 +2744,7 @@ var DataTable = function (_Component) {
                     return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
                         'tr',
                         { key: run.sku + '-' + run.team + '-' + run.type },
+                        _ref3,
                         Object.keys(headers).map(function (prop) {
                             return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
                                 'td',
@@ -4235,7 +4259,7 @@ if (typeof process !== 'undefined' && process.type === 'renderer') {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export default */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Checkbox; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__("EBst");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_preact__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__ = __webpack_require__("jM6C");
@@ -8594,15 +8618,14 @@ var SkillsList = function (_Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.state = {
-            loaded: false,
-            filters: {}
+            loaded: false
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     SkillsList.prototype.componentDidMount = function componentDidMount() {
         var _this2 = this;
 
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__lib_getSkills__["a" /* default */])(this.state.filters).then(function (list) {
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__lib_getSkills__["a" /* default */])(this.props.filters).then(function (list) {
             return _this2.setState({
                 list: list,
                 loaded: true
