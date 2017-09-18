@@ -34,7 +34,3 @@ export default class DataTable extends Component {
 		);
 	}
 }
-
-{/* <td class={style["mdl-data-table__cell--non-numeric"]}>
-                                { [run, ...prop.split(".")].reduce((a,b) => a[b]) }
-                            </td> */}
