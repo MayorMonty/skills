@@ -12,13 +12,10 @@ export default class SkillsList extends Component {
 
     state = {
         loaded: false,
-        filters: {
-            
-        }
     }
 
     componentDidMount() {
-        getSkills(this.state.filters)
+        getSkills(this.props.filters)
             .then(list => this.setState({
                 list,
                 loaded: true
