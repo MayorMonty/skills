@@ -1,36 +1,38 @@
 import { h, Component } from 'preact';
 import style from './style';
 
+import getSkills from "../../lib/getSkills";
+
+import DataTable from '../data-table';
+
 import List from 'preact-material-components/List';
 import 'preact-material-components/List/style.css';
 
 export default class SkillsList extends Component {
 
     state = {
-        loaded: false
-    }
-
-    makeAPICall({ type, program, season }) {
-        return fetch(`https://api.vexdb.io/v1/get_skills?type=${type}&season=${season}`)
-            .then(a=>a.json())
+        loaded: false,
+        filters: {
+            country: "United States"
+        }
     }
 
     componentDidMount() {
-        let { type = 2, program = "VRC", season = "In The Zone" } = this.props;
-        this.makeAPICall({ type, program, season })
-            .then(res => {
-                console.log(res);
-                this.setState({ list: res.result, loaded: true });
-            });
+        getSkills(this.state.filters)
+            .then(list => this.setState({
+                list,
+                loaded: true
+            }))
     }
 
 	render({}, { loaded, list }) {
+        console.log(list);
 		if(loaded) {
-            return <div>
+            return <div class={style.table}>
                 <List>
-                    { list.map( item => 
-                        <List.Item ripple>
-                            { item.score }
+                    { list.map( run => 
+                        <List.Item>
+                            <b>{ run.score }</b> by <a href={`https://vexdb.io/teams/view/${run.team.number}`}>{ run.team.team_name } ({ run.team.number })</a> at <a href={`https://www.robotevents.com/robot-competitions/vex-robotics-competition/${run.sku}.html`}> { run.event.name }</a>
                         </List.Item>
                     ) }
                 </List>
