@@ -19,5 +19,3 @@ export default new (class Store extends EventEmitter {
         return dlv(this.data, key);
     }
 })
-
-filters.sku
