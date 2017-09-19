@@ -25,4 +25,4 @@ export default class Home extends Component {
 }
 
 
-window.store = store;
+if(typeof window !== "undefined") window.store = store;
