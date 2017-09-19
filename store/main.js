@@ -4,6 +4,7 @@ import { EventEmitter } from "events";
 export default new (class Store extends EventEmitter {
     data = {
         filters: {},
+        currentFilters: {},
         refs: {}
     }
 
