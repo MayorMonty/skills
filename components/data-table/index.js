@@ -24,7 +24,7 @@ export default ({ headers, values }) =>
         </thead>
         <tbody>
             { values.map( run => 
-                <tr key={`${run.sku}-${run.team}-${run.type}`}>
+                <tr key={`${run.sku}-${run.team.number}-${run.type}`}>
                     <td>
                         <Checkbox></Checkbox>
                     </td>
