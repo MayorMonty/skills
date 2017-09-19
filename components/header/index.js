@@ -4,9 +4,10 @@ import style from './style';
 
 import Toolbar from 'preact-material-components/Toolbar';
 import 'preact-material-components/Toolbar/style.css';
-
 import Button from 'preact-material-components/Button';
 import 'preact-material-components/Button/style.css';
+
+import store from "../../store/main"
 
 export default class Header extends Component {
 	render() {
@@ -24,7 +25,7 @@ export default class Header extends Component {
 					</Toolbar.Section>
 					<Toolbar.Section align-end={true}>
 						<div class={style.icon}>
-							<Button icon ripple compact>
+							<Button icon ripple compact onclick={ () => store.get("refs.config").MDComponent.show() }>
 								<Toolbar.Icon>filter_list</Toolbar.Icon>
 							</Button>
 						</div>
