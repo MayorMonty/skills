@@ -3637,6 +3637,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+if (typeof window !== "undefined" && window.navigator && window.navigator.serviceWorker) {
+	navigator.serviceWorker.getRegistration("/skills/").then(function (r) {
+		return r ? r.update() : null;
+	});
+}
+
 var _ref = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_3__components_header__["a" /* default */], null);
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
