@@ -3,15 +3,26 @@ import style from "./style";
 
 import SkillsList from "../../components/skillsList";
 
-import config from "../../store/config";
+import store from "../../store/main";
 
 export default class Home extends Component {
+
+	state = {
+		filters: store.get("filters")
+	}
+
+	componentDidMount() {
+		store.on("update", ({ key, value }) => this.setState({ filters: store.get("filters") }));
+	}
+
 	render() {
-		console.log(config)
 		return (
 			<div class={style.home}>
-				<SkillsList filters={filters} />
+				<SkillsList filters={this.state.filters} />
 			</div>
 		);
 	}
 }
+
+
+window.store = store;
