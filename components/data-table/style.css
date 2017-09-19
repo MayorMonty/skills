@@ -70,10 +70,6 @@
     padding-bottom: 0;
 }
 
-.mdc-checkbox:after {
-    background-color: rgba(244, 67, 54, 0.14) !important;
-}
-
 .mdl-data-table th.mdl-data-table__header--sorted-ascending,
 .mdl-data-table th.mdl-data-table__header--sorted-descending {
     color: rgba(0, 0, 0, .87)
