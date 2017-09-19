@@ -8,7 +8,10 @@ export default new (class Store extends EventEmitter {
         refs: {}
     }
 
-    constructor() { super() }
+    constructor() { 
+        super();
+        this.on("error", console.log);
+    }
 
     set(key, value) {
         var a = dlv(this.data, key, value);
