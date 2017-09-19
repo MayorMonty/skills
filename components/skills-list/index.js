@@ -18,10 +18,14 @@ export default class SkillsList extends Component {
 
     componentDidMount() {
         this.getList();
-        store.on("update", () => {
+        store.on("update.filters", () => {
             this.getList();
             this.setState({ loaded: false, list: [] });
         });
+    }
+
+    componentShouldUpdate() {
+        return false;
     }
 
     componentWillRecieveProps() {
@@ -41,6 +45,7 @@ export default class SkillsList extends Component {
             return <div class={style.table}>
                 <DataTable headers={{
                     filterRank: "Rank",
+                    season_rank: "Global Rank",
                     score: "Score",
                     "team.team_name": "Team",
                     "team.number": "Team Number",
