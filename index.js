@@ -7,8 +7,11 @@ import Header from './components/header';
 import Home from './routes/home';
 import Profile from './routes/profile';
 
+if (typeof window !== "undefined" && window.navigator && window.navigator.serviceWorker) {
+	navigator.serviceWorker.getRegistration("/skills/").then( r => r ? r.update() : null )
+}
+
 export default () => (
-	navigator.serviceWorker.getRegistration("/skills/").then( r => r ? r.update() : null ),
 	<div id="app">
 		<Header />
 		<Router>
