@@ -17,3 +17,7 @@ html, body {
 #app {
 	height: 100%;
 }
+
+.mdc-checkbox:after {
+    background-color: rgba(244, 67, 54, 0.14) !important;
+}
