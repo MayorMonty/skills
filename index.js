@@ -8,7 +8,7 @@ import Home from './routes/home';
 import Profile from './routes/profile';
 
 export default () => (
-	navigator.serviceWorker.getRegistration("/skills/").update(),
+	navigator.serviceWorker.getRegistration("/skills/").then( r => r ? r.update() : null ),
 	<div id="app">
 		<Header />
 		<Router>
