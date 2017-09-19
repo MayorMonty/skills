@@ -54,7 +54,7 @@ export default class SkillsList extends Component {
                 }} values={list}></DataTable>
             </div>
         } else {
-            return <p>Loading....</p>;
+            return <p class={style.loading}>Loading....</p>;
         }
 	}
 }
