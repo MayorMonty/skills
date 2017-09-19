@@ -23,7 +23,17 @@ export default () => {
             </Dialog.Body>
             <Dialog.Footer>
                 <Dialog.FooterButton cancel={true} ripple>Cancel</Dialog.FooterButton>
-                <Dialog.FooterButton accept={true} ripple primary raised onClick={()=>store.set("filters", store.get("currentFilters"))}>Apply</Dialog.FooterButton>
+                <Dialog.FooterButton accept={true} ripple primary raised onClick={
+                    () => {
+                        let filters = store.get("currentFilters");
+                        for (var filter in filters) {
+                            if (filters.hasOwnProperty(filter)) {
+                                store.set(`filters.${filter}`, filters[filter]);
+                                
+                            }
+                        }
+                    }
+                }>Apply</Dialog.FooterButton>
             </Dialog.Footer>
         </Dialog>);
 }
