@@ -22,4 +22,7 @@ export default new (class Store extends EventEmitter {
     get(key) {
         return dlv(this.data, key);
     }
+    remove(key) {
+        return [this.data, ...key.split(".")].reduce((a,b,i,l)=>l.length-i==1?delete a[b]:a[b])
+    }
 })
