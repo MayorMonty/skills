@@ -785,7 +785,7 @@ var Select = function (_MaterialComponent) {
 
 Select.Item = __WEBPACK_IMPORTED_MODULE_3__List__["a" /* default */].Item;
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Select);
+/* harmony default export */ __webpack_exports__["a"] = (Select);
 
 /***/ }),
 
@@ -1835,6 +1835,13 @@ var Textfield = function (_Component) {
 Textfield.Helptext = Helptext;
 
 /* harmony default export */ __webpack_exports__["a"] = (Textfield);
+
+/***/ }),
+
+/***/ "4dzH":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -5953,6 +5960,14 @@ var numbers = {
 
 /***/ }),
 
+/***/ "RFUN":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"select":"select__Wlxpw"};
+
+/***/ }),
+
 /***/ "Rp55":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6768,6 +6783,175 @@ function () {
 
 /***/ }),
 
+/***/ "T9x5":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__("EBst");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_preact__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__ = __webpack_require__("jM6C");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+
+
+
+var LayoutGrid = function (_MaterialComponent) {
+  _inherits(LayoutGrid, _MaterialComponent);
+
+  function LayoutGrid() {
+    _classCallCheck(this, LayoutGrid);
+
+    var _this = _possibleConstructorReturn(this, _MaterialComponent.call(this));
+
+    _this.componentName = "layout-grid";
+    return _this;
+  }
+
+  LayoutGrid.prototype.materialDom = function materialDom(props) {
+    var _this2 = this;
+
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])("div", _extends({
+      ref: function ref(control) {
+        _this2.control = control;
+      }
+    }, props), props.children);
+  };
+
+  return LayoutGrid;
+}(__WEBPACK_IMPORTED_MODULE_1__MaterialComponent__["a" /* default */]);
+
+var LayoutGridInner = function (_MaterialComponent2) {
+  _inherits(LayoutGridInner, _MaterialComponent2);
+
+  function LayoutGridInner() {
+    _classCallCheck(this, LayoutGridInner);
+
+    var _this3 = _possibleConstructorReturn(this, _MaterialComponent2.call(this));
+
+    _this3.componentName = "layout-grid__inner";
+    return _this3;
+  }
+
+  LayoutGridInner.prototype.materialDom = function materialDom(props) {
+    var _this4 = this;
+
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])("div", _extends({
+      ref: function ref(control) {
+        _this4.control = control;
+      }
+    }, props), props.children);
+  };
+
+  return LayoutGridInner;
+}(__WEBPACK_IMPORTED_MODULE_1__MaterialComponent__["a" /* default */]);
+
+/**
+ * @prop cols = 0
+ * @prop desktopCols = 0
+ * @prop tabletCols = 0
+ * @prop phoneCols = 0
+ * @prop order = 0
+ * @prop align = ''
+ */
+
+
+var LayoutGridCell = function (_MaterialComponent3) {
+  _inherits(LayoutGridCell, _MaterialComponent3);
+
+  function LayoutGridCell() {
+    _classCallCheck(this, LayoutGridCell);
+
+    var _this5 = _possibleConstructorReturn(this, _MaterialComponent3.call(this));
+
+    _this5.componentName = "layout-grid__cell";
+    _this5._propsDict = {
+      cols: "cols",
+      desktop: "desktopCols",
+      tablet: "tabletCols",
+      phone: "phoneCols",
+      order: "order",
+      align: "align"
+    };
+    return _this5;
+  }
+
+  LayoutGridCell.prototype.createClassName = function createClassName(props) {
+    var baseClass = "mdc-layout-grid__cell--";
+    var classes = [];
+
+    if (props[this._propsDict.cols]) {
+      classes.push(baseClass + "span-" + props[this._propsDict.cols]);
+    }
+
+    if (props[this._propsDict.desktop]) {
+      classes.push(baseClass + "span-" + props[this._propsDict.desktop] + "-desktop");
+    }
+
+    if (props[this._propsDict.tablet]) {
+      classes.push(baseClass + "span-" + props[this._propsDict.tablet] + "-tablet");
+    }
+
+    if (props[this._propsDict.phone]) {
+      classes.push(baseClass + "span-" + props[this._propsDict.phone] + "-phone");
+    }
+
+    if (props[this._propsDict.order]) {
+      classes.push(baseClass + "order-" + props[this._propsDict.order]);
+    }
+
+    if (props[this._propsDict.align]) {
+      classes.push(baseClass + "align-" + props[this._propsDict.align]);
+    }
+
+    return classes.join(" ");
+  };
+
+  LayoutGridCell.prototype.materialDom = function materialDom(props) {
+    var _this6 = this;
+
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])("div", _extends({
+      className: this.createClassName(props),
+      ref: function ref(control) {
+        _this6.control = control;
+      }
+    }, props), props.children);
+  };
+
+  LayoutGridCell.prototype.render = function render() {
+    var _this7 = this;
+
+    var element = _MaterialComponent3.prototype.render.call(this);
+    // remove the extra attributes used for customising this element - keep the DOM clean
+    Object.keys(this._propsDict).forEach(function (key) {
+      return delete element.attributes[_this7._propsDict[key]];
+    });
+    return element;
+  };
+
+  return LayoutGridCell;
+}(__WEBPACK_IMPORTED_MODULE_1__MaterialComponent__["a" /* default */]);
+
+LayoutGrid.Cell = LayoutGridCell;
+LayoutGrid.Inner = LayoutGridInner;
+
+/* harmony default export */ __webpack_exports__["a"] = (LayoutGrid);
+
+/***/ }),
+
 /***/ "TNV1":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6996,7 +7180,7 @@ var MDCComponent = function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export default */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Formfield; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__("EBst");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_preact__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MaterialComponent__ = __webpack_require__("jM6C");
@@ -9429,6 +9613,12 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__lib_util__["a" /* dlv */])(this.data, key);
     };
 
+    Store.prototype.remove = function remove(key) {
+        return [this.data].concat(key.split(".")).reduce(function (a, b, i, l) {
+            return l.length - i == 1 ? delete a[b] : a[b];
+        });
+    };
+
     return Store;
 }(__WEBPACK_IMPORTED_MODULE_1_events__["EventEmitter"]))());
 
@@ -9805,25 +9995,30 @@ function getNormalizedEventCoords(ev, pageOffset, clientRect) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact__ = __webpack_require__("EBst");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_preact__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_preact_material_components_Dialog__ = __webpack_require__("bn2r");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Button__ = __webpack_require__("zuIX");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_preact_material_components_List__ = __webpack_require__("u5aD");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_preact_material_components_Textfield__ = __webpack_require__("4UKK");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_preact_material_components_Formfield__ = __webpack_require__("XkKD");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Select__ = __webpack_require__("0gCF");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_preact_material_components_List_style_css__ = __webpack_require__("7OxD");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_preact_material_components_List_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_preact_material_components_List_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_preact_material_components_Button_style_css__ = __webpack_require__("GzFB");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_preact_material_components_Button_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_preact_material_components_Button_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_preact_material_components_Dialog_style_css__ = __webpack_require__("fP4L");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_preact_material_components_Dialog_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_preact_material_components_Dialog_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_preact_material_components_Textfield_style_css__ = __webpack_require__("a540");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_preact_material_components_Textfield_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_preact_material_components_Textfield_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_preact_material_components_Menu_style_css__ = __webpack_require__("5Hky");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_preact_material_components_Menu_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_preact_material_components_Menu_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_preact_material_components_Select_style_css__ = __webpack_require__("20uY");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_preact_material_components_Select_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_preact_material_components_Select_style_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__store_main__ = __webpack_require__("dwjF");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style__ = __webpack_require__("RFUN");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Dialog__ = __webpack_require__("bn2r");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_preact_material_components_Button__ = __webpack_require__("zuIX");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_preact_material_components_List__ = __webpack_require__("u5aD");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_preact_material_components_Textfield__ = __webpack_require__("4UKK");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Formfield__ = __webpack_require__("XkKD");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__ = __webpack_require__("0gCF");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__ = __webpack_require__("T9x5");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_preact_material_components_List_style_css__ = __webpack_require__("7OxD");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_preact_material_components_List_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_preact_material_components_List_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_preact_material_components_Button_style_css__ = __webpack_require__("GzFB");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_preact_material_components_Button_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_preact_material_components_Button_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_preact_material_components_Dialog_style_css__ = __webpack_require__("fP4L");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_preact_material_components_Dialog_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_preact_material_components_Dialog_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_preact_material_components_Textfield_style_css__ = __webpack_require__("a540");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_preact_material_components_Textfield_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_preact_material_components_Textfield_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_preact_material_components_Menu_style_css__ = __webpack_require__("5Hky");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_preact_material_components_Menu_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_preact_material_components_Menu_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_preact_material_components_Select_style_css__ = __webpack_require__("20uY");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_preact_material_components_Select_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_preact_material_components_Select_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_preact_material_components_LayoutGrid_style_css__ = __webpack_require__("4dzH");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_preact_material_components_LayoutGrid_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_preact_material_components_LayoutGrid_style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__store_main__ = __webpack_require__("dwjF");
 
 
 
@@ -9840,48 +10035,199 @@ function getNormalizedEventCoords(ev, pageOffset, clientRect) {
 
 
 
+
+
+
+
+function putText(key) {
+    return function (a) {
+        return a.target.value.length ? __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].set(key, a.target.value) : __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].remove(key);
+    };
+}
+function putSelect(key, reference) {
+    return function (a) {
+        return a.selectedIndex ? __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].set(key, reference[a.selectedIndex]) : __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].remove(key);
+    };
+}
 
 var _ref = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-    __WEBPACK_IMPORTED_MODULE_1_preact_material_components_Dialog__["a" /* default */].Header,
+    __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Dialog__["a" /* default */].Header,
     null,
-    "Configure List"
+    'Configure List'
 );
 
 var _ref2 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-    __WEBPACK_IMPORTED_MODULE_1_preact_material_components_Dialog__["a" /* default */].FooterButton,
+    'h1',
+    null,
+    'Team Information'
+);
+
+var _ref3 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */].Item,
+    null,
+    'Grade'
+);
+
+var _ref4 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */].Item,
+    null,
+    'Middle School'
+);
+
+var _ref5 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */].Item,
+    null,
+    'High School'
+);
+
+var _ref6 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */].Item,
+    null,
+    'College'
+);
+
+var _ref7 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */].Item,
+    null,
+    'Program'
+);
+
+var _ref8 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */].Item,
+    null,
+    'VRC'
+);
+
+var _ref9 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */].Item,
+    null,
+    'VEXU'
+);
+
+var _ref10 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+    __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Dialog__["a" /* default */].FooterButton,
     { cancel: true, ripple: true },
-    "Cancel"
+    'Cancel'
 );
 
 /* harmony default export */ __webpack_exports__["a"] = (function () {
     return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-        __WEBPACK_IMPORTED_MODULE_1_preact_material_components_Dialog__["a" /* default */],
-        { ref: function ref(_ref3) {
-                return __WEBPACK_IMPORTED_MODULE_13__store_main__["a" /* default */].set("refs.config", _ref3);
+        __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Dialog__["a" /* default */],
+        { ref: function ref(_ref11) {
+                return __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].set("refs.config", _ref11);
             } },
         _ref,
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-            __WEBPACK_IMPORTED_MODULE_1_preact_material_components_Dialog__["a" /* default */].Body,
+            __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Dialog__["a" /* default */].Body,
             null,
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_4_preact_material_components_Textfield__["a" /* default */], { label: "Country", value: __WEBPACK_IMPORTED_MODULE_13__store_main__["a" /* default */].get("filters.country"), onInput: function onInput(a) {
-                    return __WEBPACK_IMPORTED_MODULE_13__store_main__["a" /* default */].set("currentFilters.country", a.target.value);
-                } })
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */],
+                null,
+                _ref2,
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                    __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Inner,
+                    null,
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                        __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Cell,
+                        { col: '4' },
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                            __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Formfield__["a" /* default */],
+                            null,
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5_preact_material_components_Textfield__["a" /* default */], { label: 'City', value: __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].get("filters.city"), onBlur: function onBlur(a) {
+                                    return putText("currentFilters.city");
+                                }, onInput: putText("currentFilters.city"), helptext: 'The city of the team' })
+                        )
+                    ),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                        __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Cell,
+                        { col: '4' },
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                            __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Formfield__["a" /* default */],
+                            null,
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5_preact_material_components_Textfield__["a" /* default */], { label: 'Region/State', value: __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].get("filters.region"), onBlur: function onBlur(a) {
+                                    return putText("currentFilters.region");
+                                }, onInput: putText("currentFilters.region"), helptext: 'The region of the team' })
+                        )
+                    ),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                        __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Cell,
+                        { col: '4' },
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                            __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Formfield__["a" /* default */],
+                            null,
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5_preact_material_components_Textfield__["a" /* default */], { label: 'Country', value: __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].get("filters.country"), onBlur: function onBlur(a) {
+                                    return putText("currentFilters.country");
+                                }, onInput: putText("currentFilters.country"), helptext: 'The country of the team' })
+                        )
+                    )
+                ),
+                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                    __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Inner,
+                    null,
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                        __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Cell,
+                        { col: '4' },
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                            __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Formfield__["a" /* default */],
+                            null,
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5_preact_material_components_Textfield__["a" /* default */], { label: 'Team Number', value: __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].get("filters.team"), onBlur: function onBlur(a) {
+                                    return putText("currentFilters.team");
+                                }, onInput: putText("currentFilters.team"), helptext: 'The city of the team' })
+                        )
+                    ),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                        __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Cell,
+                        { col: '4' },
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                            __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Formfield__["a" /* default */],
+                            null,
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                                'div',
+                                { 'class': __WEBPACK_IMPORTED_MODULE_1__style___default.a.select },
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                                    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */],
+                                    { id: 'configGrade', hintText: 'Grade', selectedIndex: 0, onChange: putSelect("currentFilters.grade", [, "Middle School", "High School", "College"]) },
+                                    _ref3,
+                                    _ref4,
+                                    _ref5,
+                                    _ref6
+                                )
+                            )
+                        )
+                    ),
+                    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                        __WEBPACK_IMPORTED_MODULE_8_preact_material_components_LayoutGrid__["a" /* default */].Cell,
+                        { col: '4' },
+                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                            __WEBPACK_IMPORTED_MODULE_6_preact_material_components_Formfield__["a" /* default */],
+                            null,
+                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                                'div',
+                                { 'class': __WEBPACK_IMPORTED_MODULE_1__style___default.a.select },
+                                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
+                                    __WEBPACK_IMPORTED_MODULE_7_preact_material_components_Select__["a" /* default */],
+                                    { id: 'configProgram', selectedIndex: 0, onChange: putSelect("currentFilters.program", [, "VRC", "VEXU"]) },
+                                    '>',
+                                    _ref7,
+                                    _ref8,
+                                    _ref9
+                                )
+                            )
+                        )
+                    )
+                )
+            )
         ),
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-            __WEBPACK_IMPORTED_MODULE_1_preact_material_components_Dialog__["a" /* default */].Footer,
+            __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Dialog__["a" /* default */].Footer,
             null,
-            _ref2,
+            _ref10,
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
-                __WEBPACK_IMPORTED_MODULE_1_preact_material_components_Dialog__["a" /* default */].FooterButton,
+                __WEBPACK_IMPORTED_MODULE_2_preact_material_components_Dialog__["a" /* default */].FooterButton,
                 { accept: true, ripple: true, primary: true, raised: true, onClick: function onClick() {
-                        var filters = __WEBPACK_IMPORTED_MODULE_13__store_main__["a" /* default */].get("currentFilters");
-                        for (var filter in filters) {
-                            if (filters.hasOwnProperty(filter)) {
-                                __WEBPACK_IMPORTED_MODULE_13__store_main__["a" /* default */].set("filters." + filter, filters[filter]);
-                            }
-                        }
+                        __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].set("filters", __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].get("currentFilters"));
                     } },
-                "Apply"
+                'Apply'
             )
         )
     );
