@@ -1931,12 +1931,15 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                     case 3:
                         inital = _context8.sent;
 
+
+                        if (inital.score) inital = [inital];
+
                         if (!before) {
-                            _context8.next = 8;
+                            _context8.next = 9;
                             break;
                         }
 
-                        _context8.next = 7;
+                        _context8.next = 8;
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* filterAsync */])(inital, function () {
                             var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee(run) {
                                 var date;
@@ -1966,16 +1969,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             };
                         }());
 
-                    case 7:
+                    case 8:
                         inital = _context8.sent;
 
-                    case 8:
+                    case 9:
                         if (!after) {
-                            _context8.next = 12;
+                            _context8.next = 13;
                             break;
                         }
 
-                        _context8.next = 11;
+                        _context8.next = 12;
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* filterAsync */])(inital, function () {
                             var _ref4 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2(run) {
                                 var date;
@@ -2005,16 +2008,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             };
                         }());
 
-                    case 11:
+                    case 12:
                         inital = _context8.sent;
 
-                    case 12:
+                    case 13:
                         if (!country) {
-                            _context8.next = 16;
+                            _context8.next = 17;
                             break;
                         }
 
-                        _context8.next = 15;
+                        _context8.next = 16;
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* filterAsync */])(inital, function () {
                             var _ref5 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee3(run) {
                                 var teamCountry;
@@ -2042,16 +2045,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             };
                         }());
 
-                    case 15:
+                    case 16:
                         inital = _context8.sent;
 
-                    case 16:
+                    case 17:
                         if (!region) {
-                            _context8.next = 20;
+                            _context8.next = 21;
                             break;
                         }
 
-                        _context8.next = 19;
+                        _context8.next = 20;
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* filterAsync */])(inital, function () {
                             var _ref6 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee4(run) {
                                 var teamRegion;
@@ -2079,16 +2082,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             };
                         }());
 
-                    case 19:
+                    case 20:
                         inital = _context8.sent;
 
-                    case 20:
+                    case 21:
                         if (!city) {
-                            _context8.next = 24;
+                            _context8.next = 25;
                             break;
                         }
 
-                        _context8.next = 23;
+                        _context8.next = 24;
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* filterAsync */])(inital, function () {
                             var _ref7 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee5(run) {
                                 var teamCity;
@@ -2116,16 +2119,16 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             };
                         }());
 
-                    case 23:
+                    case 24:
                         inital = _context8.sent;
 
-                    case 24:
+                    case 25:
                         if (!grade) {
-                            _context8.next = 28;
+                            _context8.next = 29;
                             break;
                         }
 
-                        _context8.next = 27;
+                        _context8.next = 28;
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["c" /* filterAsync */])(inital, function () {
                             var _ref8 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee6(run) {
                                 var teamGrade;
@@ -2153,17 +2156,17 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             };
                         }());
 
-                    case 27:
+                    case 28:
                         inital = _context8.sent;
 
-                    case 28:
+                    case 29:
 
                         inital = inital.sort(function (a, b) {
                             return a.season_rank - b.season_rank;
                         });
 
                         // Include info from event page and team page
-                        _context8.next = 31;
+                        _context8.next = 32;
                         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__util__["d" /* mapAysnc */])(inital, function () {
                             var _ref9 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee7(run, index) {
                                 return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee7$(_context7) {
@@ -2204,11 +2207,11 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
                             };
                         }());
 
-                    case 31:
+                    case 32:
                         inital = _context8.sent;
                         return _context8.abrupt("return", inital);
 
-                    case 33:
+                    case 34:
                     case "end":
                         return _context8.stop();
                 }
@@ -10172,7 +10175,7 @@ var _ref10 = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
                             null,
                             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(__WEBPACK_IMPORTED_MODULE_5_preact_material_components_Textfield__["a" /* default */], { label: 'Team Number', value: __WEBPACK_IMPORTED_MODULE_16__store_main__["a" /* default */].get("filters.team"), onBlur: function onBlur(a) {
                                     return putText("currentFilters.team");
-                                }, onInput: putText("currentFilters.team"), helptext: 'The city of the team' })
+                                }, onInput: putText("currentFilters.team"), helptext: 'The Team Number' })
                         )
                     ),
                     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_preact__["h"])(
