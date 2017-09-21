@@ -53,7 +53,7 @@ export default () => {
             <LayoutGrid.Inner>
                     <LayoutGrid.Cell col="4">
                     <Formfield>
-                        <Textfield label="Team Number" value={store.get("filters.team")} onBlur={a=>putText("currentFilters.team")} onInput={putText("currentFilters.team")} helptext="The city of the team" />
+                        <Textfield label="Team Number" value={store.get("filters.team")} onBlur={a=>putText("currentFilters.team")} onInput={putText("currentFilters.team")} helptext="The Team Number" />
                     </Formfield>
                     </LayoutGrid.Cell>
                     <LayoutGrid.Cell col="4">
